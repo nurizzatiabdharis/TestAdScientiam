@@ -1,4 +1,5 @@
 var labels = ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"];
+
 var ctx = document.getElementById("chart1").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -93,8 +94,8 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var ctx2 = document.getElementById("chart2").getContext('2d');
-var myChart = new Chart(ctx2, {
+var ctx = document.getElementById("chart2").getContext('2d');
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: labels,        
@@ -135,7 +136,7 @@ var myChart = new Chart(ctx2, {
 });
 
 var ctx = document.getElementById("chart3").getContext('2d');
-var mychart = new Chart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: labels,  
@@ -189,7 +190,7 @@ var mychart = new Chart(ctx, {
 });
 
 var ctx = document.getElementById("chart4").getContext('2d');
-var mychart = new Chart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: labels,  
