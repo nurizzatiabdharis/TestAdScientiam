@@ -1,0 +1,127 @@
+body {
+  padding: 0;
+  margin: 0;
+  background : #f2f2f2;
+  font-family: 'Lato', sans-serif;
+}
+/*--- navigation bar ---*/
+.navbar {
+  background: #2b3048;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 0; 
+}
+.nav-link,
+.navbar-brand {
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+}
+.nav-link {
+  margin-right: 1em !important;
+}
+.active, .nav-link:hover {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #6ec5e5;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+/*--- row ---*/
+.row-top {
+  margin: 30px 5px 10px 5px;
+}
+.row-top a{
+  color: #f45083;
+}
+.row-custome {
+  font-family: 'Lato', sans-serif;
+  color: #828080;
+  background: #fff;
+  padding: 20px;
+  margin: 20px 10px;
+  -webkit-box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
+  -moz-box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
+  box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
+}
+.row-titre{
+  font-size: 22px;
+  font-weight: bold;
+  color: #f45083;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 20px;
+}
+.nom-patient{
+  border-bottom: 1px solid #e0e1e2;
+}
+/*--- column---*/
+.col-custome{
+  color: #3888d8;
+  text-align: center;
+  border-top: 1px solid #e0e1e2;
+  border-right: 1px solid #e0e1e2;
+  font-family: 'Lato', sans-serif;
+  padding: 10px;
+}
+.col-custome:last-child{
+  border-right: 0;
+}
+.col-chart{
+  padding-top: 30px;
+  border-top: 1px solid #e0e1e2;
+}
+.col-chart-titre{
+  font-size: 17px;
+  color: #f45083;
+  font-family: 'Lato', sans-serif;
+  padding: 10px 0;
+}
+.chart-description{
+  font-size: 15px;
+  color: #828080;
+  background-color: #e0e1e2;
+  font-family: 'Lato', sans-serif;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 15px !important;
+}
+/*--- button ---*/
+.btn-custome{
+  color: #fff;
+  background: #f45083;
+  font-family: 'Lato', sans-serif;
+}
+/*--- others ---*/
+.info{
+  color: #b5b3b4;
+}
+.user-active {
+  color: #51c657;
+}
+.chiffre {
+  font-size: 30px;
+}
+/*--- footer ---*/
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+/*--- responsive ---*/
+@media (max-width: 768px) {
+  .col-xs-12, .row-titre{
+      text-align: center;
+  }
+  .col-custome:last-child, :nth-last-child(2){
+    border-top: 0px;
+  }
+  .col-custome:nth-child(odd){
+    border-right: 0px;
+  }
+}

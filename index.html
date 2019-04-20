@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MSCopilot Exercice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">
+                <img src="http://www.mscopilot.com/assets/img/share-mscopilot.png" width="35" height="35" alt="logo">
+            MSCopilot</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link active text-uppercase">patients</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-uppercase">contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-uppercase">mon profil</a></li>
+            <li class="nav-item"><a href="#" class="nav-link text-uppercase">déconnexion</a></li>
+          </ul>
+        </div>
+</nav>
+<div class="container">
+        <div class="row row-top">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                   <a href="#">< retour à la liste de patient</a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <p><button type="button" class="btn btn-custome">enregistrer en PDF</button></p>
+                </div>
+        </div>
+
+        <div class="row row-custome">
+                <div class="col-sm-12 row-titre nom-patient"> Mme. Selim TATA</div><br/>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                   <p>Année du diagnostic de la SEP: <span class="info">2014</span></p>
+                   <p>EDSS: <span class="info">2014</span></p>
+                   <p>SEP: <span class="info">Pas connu par le patient</span></p>
+                   <p>Status: <span class="user-active">Utilisateur Actif</span></p>
+                   <!-- <p><span class="info"></span></p> -->
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <p>Main dominante avant SEP: <span class="info">droite</span></p>
+                    <p>Main dominante après SEP:  <span class="info">droite</span></p>
+                    <p>Adresse mail: <span class="info">sabbassat@adscientiam.com</span></p>
+                    <p>Code d'activation: <span class="info">L1RBTP61</span></p>
+                </div> 
+        </div>
+
+        <div class="row row-custome">
+                <div class="col-sm-12 row-titre text-uppercase">adhérence</div><br/>
+                <div class="col-sm-12">
+                        <p>Le patient a réalisé 11 évaluations depuis un an.</p>
+                        <p>Patient inscrit le: 01/01/1970 <span class="info font-italic">(jour/mois/annêe)</span>.</p>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6 col-custome">
+                  <p class="text-uppercase">marche</p>
+                  <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-right"><span class="chiffre">2</span>/12</div>
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-left" style="font-size: 15px; padding: 18px 2px;">évals.</div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6 col-custome">
+                  <p class="text-uppercase">dextrérité</p>
+                  <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-right"><span class="chiffre">2</span>/12</div>
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-left" style="font-size: 15px; padding: 18px 2px;">évals.</div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6 col-custome"> 
+                  <p class="text-uppercase">cognition</p>
+                  <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-right"><span class="chiffre">4</span>/4</div>
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-left" style="font-size: 15px; padding: 18px 2px;">évals.</div>
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6 col-custome">
+                  <p class="text-uppercase">visison</p>
+                  <div class="row">
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-right"><span class="chiffre">3</span>/4</div>
+                        <div class="col-12 col-lg-6 col-md-6 text-lg-left" style="font-size: 15px; padding: 18px 2px;">évals.</div>
+                  </div>
+                </div>
+        </div>
+        
+        <div class="row row-custome">
+                <div class="col-sm-12 row-titre text-uppercase">résultat des tests</div><br/>
+                <div class="col-lg-12 col-chart">
+                    <div class="row no-gutters">
+                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img1.png" width="50" height="50" alt="marche"></div>
+                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">marche</div>
+                    </div><br/>
+                    <div class="row no-gutters">
+                        <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Périmètre de marche (mètres)</div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 chart-description">Le périmètre de marche est la distance en mètres que le patient a marché avant de stopper</div>
+                    </div>
+                    <!-- chart-graphique -->
+                    <!-- <canvas id="myChart" width="700" height="300"></canvas> -->
+                </div>
+                <div class="col-lg-12 col-chart">
+                    <div class="row no-gutters">
+                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img2.png" width="50" height="50" alt="dextrérité"></div>
+                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">dextrérité</div>
+                    </div>
+                    <div class="row no-gutters">
+                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Écart moyen (mm)</div>
+                            <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
+                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">L'écart moyen est la moyenne des distances entre le trajet du patient et le trajet idéal</div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 col-chart">
+                    <div class="row no-gutters">
+                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img3.png" width="50" height="50" alt="cognition"></div>
+                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">cognition</div>
+                    </div>
+                    <div class="row no-gutters">
+                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre de bonnes réponses</div>
+                            <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
+                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">Nombre de chiffres correctement appairés aux symboles de cognition. Les symboles ont été énoncés verbalement par le patient</div>
+                    </div>
+                </div> 
+                <div class="col-lg-12 col-chart">
+                    <div class="row no-gutters">
+                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img4.png" width="50" height="50" alt="visison"></div>
+                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">visison</div>
+                    </div>
+                    <div class="row no-gutters">
+                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre fe bonnes réponses</div>
+                            <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
+                            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">Nombre de chiffres correctement lues et énoncés verbalement par le patient</div>
+                    </div>
+                </div> 
+        </div>
+
+<footer class="page-footer">
+        <div class="container">
+          <div class="row no-gutter">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-lg-right">
+            <img src="http://www.mscopilot.com/assets/img/share-mscopilot.png" width="70" height="70" alt="logo">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-lg-left">
+                <div>Dispositif Médical logiciel réalisé avec <span><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Love_Heart_symbol.svg" width="10" height="10" alt="love"></span> par<br/>
+                    <span style="font-size:20px;">Ad Scientiem</span></div>
+            </div>
+            
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-capitalize"><p>accueil</p></div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-capitalize"><p>aide</p></div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-capitalize"><p>légal</p></div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-capitalize"><p>presse</p></div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-capitalize"><p>contact</p></div>
+                </div>
+                <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><p>Je suis un patient</p></div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p>Je suis un professionnel de santé</p></div>
+                </div>    
+                
+            </div>
+        </div>
+</footer>
+<!-- chart-script -->
+<script src="script.js"></script>
+</body>
+</html>
