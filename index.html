@@ -28,11 +28,11 @@
         </div>
 </nav>
 <div class="container">
-        <div class="row row-top">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 row-top">
                    <a href="#">< retour à la liste de patient</a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 row-top">
                     <p><button type="button" class="btn btn-custome">enregistrer en PDF</button></p>
                 </div>
         </div>
@@ -44,7 +44,6 @@
                    <p>EDSS: <span class="info">2014</span></p>
                    <p>SEP: <span class="info">Pas connu par le patient</span></p>
                    <p>Status: <span class="user-active">Utilisateur Actif</span></p>
-                   <!-- <p><span class="info"></span></p> -->
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <p>Main dominante avant SEP: <span class="info">droite</span></p>
@@ -94,48 +93,63 @@
                 <div class="col-sm-12 row-titre text-uppercase">résultat des tests</div><br/>
                 <div class="col-lg-12 col-chart">
                     <div class="row no-gutters">
-                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img1.png" width="50" height="50" alt="marche"></div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img1.png" width="50" height="50" alt="marche"></div>
                         <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">marche</div>
                     </div><br/>
                     <div class="row no-gutters">
-                        <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Périmètre de marche (mètres)</div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">Périmètre de marche (mètres)</div>
                         <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 chart-description">Le périmètre de marche est la distance en mètres que le patient a marché avant de stopper</div>
                     </div>
                     <!-- chart-graphique -->
-                    <!-- <canvas id="myChart" width="700" height="300"></canvas> -->
+                    <div id="canvasWrapper" style="position: relative; height: 50vh">
+                        <canvas id="chart1" ></canvas>
+                    </div>
                 </div>
                 <div class="col-lg-12 col-chart">
                     <div class="row no-gutters">
-                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img2.png" width="50" height="50" alt="dextrérité"></div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img2.png" width="50" height="50" alt="dextrérité"></div>
                         <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">dextrérité</div>
                     </div>
                     <div class="row no-gutters">
-                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Écart moyen (mm)</div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">Écart moyen (mm)</div>
                             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">L'écart moyen est la moyenne des distances entre le trajet du patient et le trajet idéal</div>
                     </div>
+                    <!-- chart-graphique -->
+                    <div id="canvasWrapper" style="position: relative; height: 50vh">
+                        <canvas id="chart2"></canvas>
+                    </div>
                 </div> 
                 <div class="col-lg-12 col-chart">
                     <div class="row no-gutters">
-                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img3.png" width="50" height="50" alt="cognition"></div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img3.png" width="50" height="50" alt="cognition"></div>
                         <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">cognition</div>
                     </div>
                     <div class="row no-gutters">
-                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre de bonnes réponses</div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre de bonnes réponses</div>
                             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">Nombre de chiffres correctement appairés aux symboles de cognition. Les symboles ont été énoncés verbalement par le patient</div>
                     </div>
+                    <!-- chart-graphique -->
+                    <div id="canvasWrapper" style="position: relative; height: 50vh">
+                        <canvas id="chart3"></canvas>
+                    </div>
+                    
                 </div> 
                 <div class="col-lg-12 col-chart">
                     <div class="row no-gutters">
-                        <div class="ccol-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img4.png" width="50" height="50" alt="visison"></div>
-                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">visison</div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12 text-lg-right"><img src="img/img4.png" width="50" height="50" alt="visison"></div>
+                        <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-chart-titre text-uppercase">vision</div>
                     </div>
                     <div class="row no-gutters">
-                            <div class="ccol-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre fe bonnes réponses</div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">Nombre fe bonnes réponses</div>
                             <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12"><img src="img/questionmark.png" width="30" height="30" alt="questionmark"></div>
                             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 chart-description">Nombre de chiffres correctement lues et énoncés verbalement par le patient</div>
+                    </div>
+                    <!-- chart-graphique -->
+                    <div id="canvasWrapper" style="position: relative; height: 50vh;">
+                        <canvas id="chart4"></canvas>
                     </div>
                 </div> 
         </div>
@@ -148,7 +162,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-lg-left">
                 <div>Dispositif Médical logiciel réalisé avec <span><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Love_Heart_symbol.svg" width="10" height="10" alt="love"></span> par<br/>
-                    <span style="font-size:20px;">Ad Scientiem</span></div>
+                    <span style="font-size:20px;">Ad Scientiam</span></div>
             </div>
             
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
