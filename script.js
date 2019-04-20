@@ -1,8 +1,9 @@
-var ctx1 = document.getElementById("chart1").getContext('2d');
-var chart1 = new Chart(ctx1, {
+var labels = ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"];
+var ctx = document.getElementById("chart1").getContext('2d');
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"],
+        labels: labels,
         datasets: [{
             label: 'Aucune aide', 
             data: [], 
@@ -65,17 +66,40 @@ var chart1 = new Chart(ctx1, {
                 }
                 
             }]
-        }
+        },
+        layout:{
+            padding:{left:15,right:15,top:25,bottom:5}
+        },
+        animation: {
+            onComplete: function () {
+                var ctx = this.chart.ctx;
+                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                ctx.fillStyle = "#72a34f";
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+        
+                this.data.datasets.forEach(function (dataset)
+                {
+                    for (var i = 0; i < dataset.data.length; i++) {
+                        for(var key in dataset._meta)
+                        {
+                            var model = dataset._meta[key].data[i]._model;
+                            ctx.fillText(dataset.data[i], model.x, model.y - 10);
+                        }
+                    }
+                });
+            }
+        }  
     }
 });
 
 var ctx2 = document.getElementById("chart2").getContext('2d');
-var chart2 = new Chart(ctx2, {
+var myChart = new Chart(ctx2, {
     type: 'line',
     data: {
-        labels: ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"],
+        labels: labels,        
         datasets: [{
-            label: 'main gauche', 
+            label: 'Main gauche', 
             data: [ , ,	, , , , , , , -1.0, 4.0], 
             fill: false,
             borderColor: '#3f92ea', 
@@ -83,8 +107,8 @@ var chart2 = new Chart(ctx2, {
             borderWidth: 3,
             pointRadius: 5
         },
-                  {
-            label: 'Series 2', 
+        {
+            label: 'Main droite', 
             data: [ , ,	, , , , , , , 1.3, -1.0], 
             fill: false,
             borderColor: '#481d70', 
@@ -95,7 +119,6 @@ var chart2 = new Chart(ctx2, {
     },
     options: {
         responsive: true, 
-        maintainAspectRatio: true, 
         maintainAspectRatio: false,
         legend: {position: 'bottom'},
         scales: {
@@ -104,15 +127,18 @@ var chart2 = new Chart(ctx2, {
                     display:false
                 }
             }]
-        }
+        },
+        layout:{
+            padding:{left:15,right:15,top:25,bottom:5}
+        } 
     }
 });
 
-var ctx3 = document.getElementById("chart3").getContext('2d');
-var chart3 = new Chart(ctx3, {
+var ctx = document.getElementById("chart3").getContext('2d');
+var mychart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"],
+        labels: labels,  
         datasets: [{
             data: [ , , , , ,21, ,0,0,18], 
             fill: false,
@@ -131,27 +157,49 @@ var chart3 = new Chart(ctx3, {
                 gridLines: {
                     display:false
                 }
-                
             }]
         },
         legend: {
             display: false
-        }  
+        },
+        layout:{
+            padding:{left:15,right:15,top:25,bottom:5}
+        },
+        animation: {
+            onComplete: function () {
+                var ctx = this.chart.ctx;
+                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                ctx.fillStyle = "#ffb951";
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+        
+                this.data.datasets.forEach(function (dataset)
+                {
+                    for (var i = 0; i < dataset.data.length; i++) {
+                        for(var key in dataset._meta)
+                        {
+                            var model = dataset._meta[key].data[i]._model;
+                            ctx.fillText(dataset.data[i], model.x, model.y - 10);
+                        }
+                    }
+                });
+            }
+        } 
     }
 });
 
-var ctx4 = document.getElementById("chart4").getContext('2d');
-var chart4 = new Chart(ctx4, {
+var ctx = document.getElementById("chart4").getContext('2d');
+var mychart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["mai",	"juin",	"juillet",	"août",	"sept",	"oct",	"nov","dec", "jan 19", "fév19", "mars 19", "avr 19"],
+        labels: labels,  
         datasets: [{
             data: [,,,,,,,1,1,0],
             fill: false,
             borderColor: '#72a34f', 
             backgroundColor: '#72a34f',
             borderWidth: 3,
-            pointRadius: 5
+            pointRadius: 8
         }]
     },
     options: {
@@ -163,13 +211,33 @@ var chart4 = new Chart(ctx4, {
                 gridLines: {
                     display:false
                 }
-                
-            }],
-            display: true,
+            }]
         },
         legend: {
             display: false
-        }
+        },
+        layout:{
+            padding:{left:15,right:15,top:25,bottom:5}
+        },
+        animation: {
+            onComplete: function () {
+                var ctx = this.chart.ctx;
+                ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                ctx.fillStyle = "#72a34f";
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
         
+                this.data.datasets.forEach(function (dataset)
+                {
+                    for (var i = 0; i < dataset.data.length; i++) {
+                        for(var key in dataset._meta)
+                        {
+                            var model = dataset._meta[key].data[i]._model;
+                            ctx.fillText(dataset.data[i], model.x, model.y - 10);
+                        }
+                    }
+                });
+            }
+        } 
     }
 });
