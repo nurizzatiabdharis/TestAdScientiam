@@ -29,7 +29,8 @@ body {
 }
 /*--- row ---*/
 .row-top {
-  margin: 30px 5px 10px 5px;
+  margin: 10px 0;
+  padding-left: 50px; 
 }
 .row-top a{
   color: #f45083;
@@ -39,7 +40,7 @@ body {
   color: #828080;
   background: #fff;
   padding: 20px;
-  margin: 20px 10px;
+  margin: 20px 50px;
   -webkit-box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
   -moz-box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
   box-shadow: 8px 7px 24px -9px rgba(244,80,131,0.31);
@@ -67,7 +68,7 @@ body {
   border-right: 0;
 }
 .col-chart{
-  padding-top: 30px;
+  padding: 30px;
   border-top: 1px solid #e0e1e2;
 }
 .col-chart-titre{
@@ -118,7 +119,8 @@ body {
   .col-xs-12, .row-titre{
       text-align: center;
   }
-  .col-custome:last-child, :nth-last-child(2){
+  .col-custome:last-child, 
+  .col-custome:nth-last-child(2){
     border-top: 0px;
   }
   .col-custome:nth-child(odd){
@@ -129,5 +131,8 @@ body {
     font-weight: bold;
     border-bottom: 0;
     border-right: 2px solid #6ec5e5;
+  }
+  .row-custome{
+    margin: 20px 10px;
   }
 }
